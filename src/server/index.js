@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile(path.resolve('dist/index.html'))
 });
 
 app.listen(8081, () => {
