@@ -1,16 +1,18 @@
-function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
+const checkForName = (inputText) => {
     let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+        'picard',
+        'janeway',
+        'kirk',
+        'archer',
+        'georgiou'
+    ];
 
-    if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+    if (new RegExp(names.join("|")).test(inputText.toLowerCase())) {
+        alert('Welcome, Captain!');
+        return 'found!'
     }
 }
 
-export { checkForName }
+export {
+    checkForName
+}
